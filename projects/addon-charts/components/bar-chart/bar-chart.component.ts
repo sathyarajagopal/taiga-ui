@@ -12,11 +12,15 @@ import {
 import {TuiHintModeT, TuiSizeL, TuiSizeS} from '@taiga-ui/core';
 import {PolymorpheusContent} from '@tinkoff/ng-polymorpheus';
 
+/**
+ * @deprecated: use {@link tuiValueAssertion} instead
+ */
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export function valueAssertion(value: ReadonlyArray<readonly number[]>): boolean {
-    const valid = value.every(array => array.length === value[0].length);
-
-    return valid;
+    return value.every(array => array.length === value[0].length);
 }
+
+export const tuiValueAssertion = valueAssertion;
 
 const VALUE_ERROR = 'All arrays must be of the same length';
 
