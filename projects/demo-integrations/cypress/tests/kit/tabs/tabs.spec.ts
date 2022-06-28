@@ -7,7 +7,6 @@ describe('Tabs', () => {
 
         cy.get('#complex')
             .findByAutomationId(EXAMPLE_ID)
-            .should('be.visible')
             .tuiScrollIntoView()
             .matchImageSnapshot('01-[wide-screen]-[no-margin-last-tab]');
     });
