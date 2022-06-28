@@ -21,4 +21,11 @@
         background: var(--tui-link);
         box-shadow: none;
     }
+
+    &::ng-deep > :where(:not(:last-child)) {
+        & [tuiTab],
+        &[tuiTab] {
+            margin-right: var(--tui-tab-margin, 1.5rem);
+        }
+    }
 }

@@ -28,7 +28,7 @@ import {
     TuiDestroyService,
     TuiResizeService,
 } from '@taiga-ui/cdk';
-import {TUI_MOBILE_AWARE} from '@taiga-ui/kit/tokens';
+import {TUI_MOBILE_AWARE, TUI_TAB_MARGIN} from '@taiga-ui/kit/tokens';
 import {Observable} from 'rxjs';
 import {filter} from 'rxjs/operators';
 
@@ -58,6 +58,9 @@ export const OBSERVER_INIT = {
             useValue: OBSERVER_INIT,
         },
     ],
+    host: {
+        '[style.--tui-tab-margin.px]': 'margin',
+    },
 })
 export class TuiTabsComponent implements AfterViewChecked {
     @ContentChildren(forwardRef(() => TuiTabComponent))
@@ -94,6 +97,7 @@ export class TuiTabsComponent implements AfterViewChecked {
         @Inject(TUI_IS_IOS) isIos: boolean,
         @Inject(TUI_IS_ANDROID) isAndroid: boolean,
         @Inject(TUI_MOBILE_AWARE) mobileAware: boolean,
+        @Inject(TUI_TAB_MARGIN) readonly margin: number,
     ) {
         this.isIos = mobileAware && isIos;
         this.isAndroid = mobileAware && isAndroid;
