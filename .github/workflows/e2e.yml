@@ -20,6 +20,7 @@ env:
   PATH_NEXT_DIST: dist/gh-pages
   PATH_LOCAL_DIST: dist/demo
   NG_SERVER_PORT: 3333
+  ACTIONS_STEP_DEBUG: true
 
 jobs:
   build-demo:
