@@ -1,5 +1,7 @@
 import {TuiControlValueTransformer, TuiDay, TuiTime} from '@taiga-ui/cdk';
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class ExampleDateTimeTransformer
     implements TuiControlValueTransformer<[TuiDay | null, TuiTime | null], string>
 {

@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import { Component, ViewChild, Directive } from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {FormBuilder, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {TuiRatingComponent, TuiRatingModule} from '@taiga-ui/kit/components';
@@ -7,7 +7,8 @@ describe('Rating', () => {
     let component: TuiRatingComponent;
     let testComponent: AbstractTestComponent;
 
-    class AbstractTestComponent {
+    @Directive()
+class AbstractTestComponent {
         @ViewChild(TuiRatingComponent, {static: true})
         component!: TuiRatingComponent;
 
