@@ -62,18 +62,18 @@ jobs:
         specFolder:
           [
             addon-doc,
-            addon-charts,
-            addon-commerce,
-            addon-editor,
-            addon-icons,
-            addon-mobile,
-            addon-preview,
-            addon-table,
-            addon-tablebars,
-            core,
-            deep,
-            demo,
-            kit,
+#            addon-charts,
+#            addon-commerce,
+#            addon-editor,
+#            addon-icons,
+#            addon-mobile,
+#            addon-preview,
+#            addon-table,
+#            addon-tablebars,
+#            core,
+#            deep,
+#            demo,
+#            kit,
           ]
     name: ${{ matrix.specFolder }}
     steps:
